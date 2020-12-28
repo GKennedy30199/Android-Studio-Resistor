@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/BandColor3"
+        android:layout_width="19dp"
+        android:layout_height="76dp"
+        android:text="@string/_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/BandColor2"
+        android:layout_width="18dp"
+        android:layout_height="71dp"
+        android:text="@string/_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/BandColor1"
+        android:layout_width="19dp"
+        android:layout_height="71dp"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <TextView
+        android:id="@+id/AppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resistor_app"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BandTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bandnumber"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppTitle" />
+
+    <Button
+        android:id="@+id/BandNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Band1"
+        android:text="@string/_1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BandNum2"
+        app:layout_constraintEnd_toStartOf="@+id/BandNum2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BandNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="Band2"
+        android:text="@string/_2"
+        app:layout_constraintEnd_toStartOf="@+id/BandNum3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BandNum1"
+        app:layout_constraintTop_toBottomOf="@+id/BandTitle" />
+
+    <Button
+        android:id="@+id/BandNum3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Band3"
+        android:text="@string/_3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BandNum2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BandNum2" />
+
+    <TextView
+        android:id="@+id/BandColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/band_color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BandNum2"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <Button
+        android:id="@+id/WhiteButton"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:onClick="White"
+        android:text="@string/white"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RedButton"
+        app:layout_constraintEnd_toStartOf="@+id/RedButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="393dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResetButton"
+        app:srcCompat="@drawable/background" />
+
+    <Button
+        android:id="@+id/RedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="Red"
+        android:text="@string/red"
+        app:layout_constraintEnd_toStartOf="@+id/BlueButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/WhiteButton"
+        app:layout_constraintTop_toBottomOf="@+id/BandColor" />
+
+    <Button
+        android:id="@+id/YellowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/purple_200"
+        android:onClick="Yellow"
+        android:text="@string/yellow"
+        app:layout_constraintEnd_toStartOf="@+id/GreyButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/GreenButton"
+        app:layout_constraintTop_toBottomOf="@+id/RedButton" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <Button
+        android:id="@+id/GreenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:onClick="Green"
+        android:text="@string/green"
+        app:layout_constraintBaseline_toBaselineOf="@+id/YellowButton"
+        app:layout_constraintEnd_toStartOf="@+id/YellowButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BlueButton"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="Blue"
+        android:text="@string/blue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/RedButton" />
+
+    <Button
+        android:id="@+id/GreyButton"
+        android:layout_width="89dp"
+        android:layout_height="44dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="Grey"
+
+        android:text="@string/gray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/YellowButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/YellowButton" />
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ResetResult"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/CalculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Calculate"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
